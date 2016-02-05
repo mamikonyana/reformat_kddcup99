@@ -12,5 +12,5 @@ if __name__ == '__main__':
   next(args.infile)  # Skip the first line
   names = [line.split(':')[0].strip() for line in args.infile]
   names.append('anomaly')  # append the label
-  # Keep a period in the end not to change the format
-  args.outfile.write(','.join(names) + '.\n')
+  # Note that there is no period in the end
+  args.outfile.write(','.join(names) + '\n')
